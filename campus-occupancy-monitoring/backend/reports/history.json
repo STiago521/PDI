@@ -1,0 +1,270 @@
+{
+  "reports": [
+    {
+      "id": "20260523152600156533",
+      "timestamp": "2026-05-23T15:26:00.156533",
+      "date_display": "23 May 2026, 03:26 PM",
+      "site": "Sótano 1",
+      "people_count": 25,
+      "status": "Parcialmente lleno",
+      "images_analyzed": 5,
+      "image_names": [
+        "WhatsApp Image 2026-04-10 at 2.54.32 PM (2).jpeg",
+        "espacioreducidoej.jpeg",
+        "WhatsApp Image 2026-04-10 at 2.54.30 PM (1).jpeg",
+        "WhatsApp Image 2026-03-28 at 2.56.50 PM (4).jpeg",
+        "WhatsApp Image 2026-03-28 at 2.56.53 PM (2).jpeg"
+      ],
+      "processed_images": [
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.54.32 PM (2)_result_20260523_152557.jpg",
+          "count": 3
+        },
+        {
+          "filename": "espacioreducidoej_result_20260523_152558.jpg",
+          "count": 3
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.54.30 PM (1)_result_20260523_152558.jpg",
+          "count": 1
+        },
+        {
+          "filename": "WhatsApp Image 2026-03-28 at 2.56.50 PM (4)_result_20260523_152559.jpg",
+          "count": 4
+        },
+        {
+          "filename": "WhatsApp Image 2026-03-28 at 2.56.53 PM (2)_result_20260523_152600.jpg",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "id": "20260523152500146266",
+      "timestamp": "2026-05-23T15:25:00.146266",
+      "date_display": "23 May 2026, 03:25 PM",
+      "site": "Sótano 1",
+      "people_count": 50,
+      "status": "Lleno",
+      "images_analyzed": 5,
+      "image_names": [
+        "r.jpeg",
+        "WhatsApp Image 2026-03-28 at 2.56.52 PM (13).jpeg",
+        "WhatsApp Image 2026-03-28 at 2.56.49 PM (7).jpeg",
+        "WhatsApp Image 2026-04-10 at 2.53.03 PM (1).jpeg",
+        "WhatsApp Image 2026-04-10 at 2.53.07 PM (2).jpeg"
+      ],
+      "processed_images": [
+        {
+          "filename": "r_result_20260523_152457.jpg",
+          "count": 1
+        },
+        {
+          "filename": "WhatsApp Image 2026-03-28 at 2.56.52 PM (13)_result_20260523_152458.jpg",
+          "count": 19
+        },
+        {
+          "filename": "WhatsApp Image 2026-03-28 at 2.56.49 PM (7)_result_20260523_152458.jpg",
+          "count": 13
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.53.03 PM (1)_result_20260523_152459.jpg",
+          "count": 4
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.53.07 PM (2)_result_20260523_152500.jpg",
+          "count": 13
+        }
+      ]
+    },
+    {
+      "id": "20260523152342289511",
+      "timestamp": "2026-05-23T15:23:42.289511",
+      "date_display": "23 May 2026, 03:23 PM",
+      "site": "Sótano 1",
+      "people_count": 51,
+      "status": "Lleno",
+      "images_analyzed": 5,
+      "image_names": [
+        "WhatsApp Image 2026-04-10 at 2.53.13 PM (1).jpeg",
+        "WhatsApp Image 2026-03-28 at 2.56.50 PM (1).jpeg",
+        "WhatsApp Image 2026-04-10 at 2.52.01 PM (4).jpeg",
+        "WhatsApp Image 2026-04-10 at 2.53.04 PM.jpeg",
+        "WhatsApp Image 2026-03-28 at 2.59.19 PM (5).jpeg"
+      ],
+      "processed_images": [
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.53.13 PM (1)_result_20260523_152339.jpg",
+          "count": 12
+        },
+        {
+          "filename": "WhatsApp Image 2026-03-28 at 2.56.50 PM (1)_result_20260523_152340.jpg",
+          "count": 19
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.52.01 PM (4)_result_20260523_152341.jpg",
+          "count": 13
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.53.04 PM_result_20260523_152341.jpg",
+          "count": 7
+        },
+        {
+          "filename": "WhatsApp Image 2026-03-28 at 2.59.19 PM (5)_result_20260523_152342.jpg",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "id": "20260523152242229771",
+      "timestamp": "2026-05-23T15:22:42.229771",
+      "date_display": "23 May 2026, 03:22 PM",
+      "site": "Sótano 1",
+      "people_count": 48,
+      "status": "Parcialmente lleno",
+      "images_analyzed": 5,
+      "image_names": [
+        "WhatsApp Image 2026-04-10 at 2.54.29 PM (2).jpeg",
+        "WhatsApp Image 2026-04-10 at 2.52.02 PM.jpeg",
+        "WhatsApp Image 2026-04-10 at 2.54.33 PM.jpeg",
+        "WhatsApp Image 2026-03-28 at 2.56.46 PM.jpeg",
+        "WhatsApp Image 2026-04-10 at 2.53.14 PM.jpeg"
+      ],
+      "processed_images": [
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.54.29 PM (2)_result_20260523_152239.jpg",
+          "count": 6
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.52.02 PM_result_20260523_152240.jpg",
+          "count": 14
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.54.33 PM_result_20260523_152240.jpg",
+          "count": 5
+        },
+        {
+          "filename": "WhatsApp Image 2026-03-28 at 2.56.46 PM_result_20260523_152241.jpg",
+          "count": 11
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.53.14 PM_result_20260523_152242.jpg",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "id": "20260523152141452608",
+      "timestamp": "2026-05-23T15:21:41.452608",
+      "date_display": "23 May 2026, 03:21 PM",
+      "site": "Sótano 1",
+      "people_count": 31,
+      "status": "Parcialmente lleno",
+      "images_analyzed": 5,
+      "image_names": [
+        "WhatsApp Image 2026-03-28 at 2.59.14 PM (9).jpeg",
+        "WhatsApp Image 2026-04-10 at 2.53.00 PM.jpeg",
+        "WhatsApp Image 2026-04-10 at 2.53.02 PM (3).jpeg",
+        "WhatsApp Image 2026-03-28 at 2.56.53 PM (1).jpeg",
+        "WhatsApp Image 2026-04-10 at 2.53.09 PM (4).jpeg"
+      ],
+      "processed_images": [
+        {
+          "filename": "WhatsApp Image 2026-03-28 at 2.59.14 PM (9)_result_20260523_152138.jpg",
+          "count": 3
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.53.00 PM_result_20260523_152139.jpg",
+          "count": 5
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.53.02 PM (3)_result_20260523_152140.jpg",
+          "count": 1
+        },
+        {
+          "filename": "WhatsApp Image 2026-03-28 at 2.56.53 PM (1)_result_20260523_152140.jpg",
+          "count": 14
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.53.09 PM (4)_result_20260523_152141.jpg",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": "20260523151941153707",
+      "timestamp": "2026-05-23T15:19:41.153707",
+      "date_display": "23 May 2026, 03:19 PM",
+      "site": "Sótano 1",
+      "people_count": 38,
+      "status": "Parcialmente lleno",
+      "images_analyzed": 5,
+      "image_names": [
+        "WhatsApp Image 2026-04-10 at 2.54.35 PM.jpeg",
+        "WhatsApp Image 2026-04-10 at 2.52.02 PM.jpeg",
+        "WhatsApp Image 2026-04-10 at 2.54.26 PM (2).jpeg",
+        "WhatsApp Image 2026-04-10 at 2.52.01 PM (5).jpeg",
+        "WhatsApp Image 2026-04-10 at 2.07.18 PM (1).jpeg"
+      ],
+      "processed_images": [
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.54.35 PM_result_20260523_151938.jpg",
+          "count": 6
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.52.02 PM_result_20260523_151939.jpg",
+          "count": 14
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.54.26 PM (2)_result_20260523_151939.jpg",
+          "count": 1
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.52.01 PM (5)_result_20260523_151940.jpg",
+          "count": 11
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.07.18 PM (1)_result_20260523_151941.jpg",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "id": "20260523151841045426",
+      "timestamp": "2026-05-23T15:18:41.045426",
+      "date_display": "23 May 2026, 03:18 PM",
+      "site": "Sótano 1",
+      "people_count": 39,
+      "status": "Parcialmente lleno",
+      "images_analyzed": 5,
+      "image_names": [
+        "WhatsApp Image 2026-04-10 at 2.53.14 PM (2).jpeg",
+        "WhatsApp Image 2026-04-10 at 2.53.08 PM (3).jpeg",
+        "WhatsApp Image 2026-03-28 at 2.56.50 PM (9).jpeg",
+        "WhatsApp Image 2026-04-10 at 2.51.56 PM (1).jpeg",
+        "WhatsApp Image 2026-04-10 at 2.51.58 PM (4).jpeg"
+      ],
+      "processed_images": [
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.53.14 PM (2)_result_20260523_151837.jpg",
+          "count": 16
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.53.08 PM (3)_result_20260523_151838.jpg",
+          "count": 15
+        },
+        {
+          "filename": "WhatsApp Image 2026-03-28 at 2.56.50 PM (9)_result_20260523_151839.jpg",
+          "count": 4
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.51.56 PM (1)_result_20260523_151840.jpg",
+          "count": 0
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.51.58 PM (4)_result_20260523_151841.jpg",
+          "count": 4
+        }
+      ]
+    }
+  ]
+}
