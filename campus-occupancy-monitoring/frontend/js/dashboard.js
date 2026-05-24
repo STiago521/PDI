@@ -6,7 +6,7 @@ const CONFIG = {
     API_BASE_URL: 'http://localhost:5000/api',
     UPDATE_INTERVAL_MS: 15 * 60 * 1000,
     TOAST_DURATION_MS: 3500,
-    PEOPLE_THRESHOLDS: { empty_max: 20, partial_max: 49 },
+    PEOPLE_THRESHOLDS: { empty_max: 30, partial_max: 60 },
 };
 
 const AUTO_INTERVAL_SECONDS = 15 * 60; // 15 minutos
@@ -87,7 +87,7 @@ function updateDashboard(data) {
 }
 
 function updateProgressBar(count) {
-    const pct = Math.min((count / 50) * 100, 100);
+    const pct = Math.min((count / 60) * 100, 100);
     el.occupancyProgress.style.width = `${pct}%`;
     el.occupancyProgress.classList.remove('low', 'medium', 'high');
     if (count <= CONFIG.PEOPLE_THRESHOLDS.empty_max)        el.occupancyProgress.classList.add('low');

@@ -14,13 +14,13 @@ MODELS_FOLDER = "models"
 CAMERA_INDEX = 0
 
 # Umbrales basados en conteo ABSOLUTO de personas
-# Vacío: 0 – 20 personas
-# Parcialmente lleno: 21 – 49 personas
-# Lleno: 50 o más personas
+# Vacío: 0 – 30 personas
+# Parcialmente lleno: 30 – 60 personas
+# Lleno: 60 o más personas
 
 PEOPLE_THRESHOLDS = {
-    "empty_max": 20,
-    "partial_max": 49,
+    "empty_max": 30,
+    "partial_max": 60,
 }
 
 STATUS_LABELS = {
@@ -37,8 +37,5 @@ REPORTS_FILE = "reports/history.json"
 DATASET_FOLDER = "../dataset"
 
 MONITORED_SITES = [
-    {"id": 1, "name": "Sótano 1", "max_capacity": 90},
-    {"id": 2, "name": "Sótano 2", "max_capacity": 80},
-    {"id": 3, "name": "Biblioteca", "max_capacity": 150},
-    {"id": 4, "name": "Cafetería", "max_capacity": 100},
+    {"id": 1, "name": "Sótano 1", "max_capacity": 90}
 ]

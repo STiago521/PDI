@@ -15,6 +15,18 @@ Crear un sistema que permita:
 - Visualizar resultados en un dashboard web intuitivo
 - Generar alertas según niveles de ocupación
 
+## Arquitectura del Sistema
+
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│    Cámaras      │────▶│    Backend      │────▶│    Frontend     │
+│   (Capturas)    │     │  (Flask + YOLO) │     │   (Dashboard)   │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+        │                       │                       │
+        ▼                       ▼                       ▼
+   Cada 15 min           Procesamiento            Visualización
+                         con YOLOv8               en tiempo real
+```
 ## Tecnologías Utilizadas
 
 ### Backend
