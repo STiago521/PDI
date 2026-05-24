@@ -135,7 +135,7 @@ async function analyzeDataset() {
     el.analyzeBtn.disabled = true;
     // Reinicia el temporizador global al analizar manualmente
     localStorage.setItem(LS_KEY, Date.now() + AUTO_INTERVAL_SECONDS * 1000);
-    showLoading(true, 'Seleccionando 5 imágenes aleatorias y analizando con YOLO...');
+    showLoading(true, 'Capturando 5 imágenes y analizando con YOLO...');
     try {
         const response = await fetch(`${CONFIG.API_BASE_URL}/analizar-dataset`, { method: 'POST' });
         if (!response.ok) throw new Error(`Error HTTP ${response.status}`);
