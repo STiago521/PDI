@@ -4,8 +4,8 @@ Detecta personas en imágenes usando YOLOv8 preentrenado (COCO clase 0).
 Si ultralytics no está instalado, cae en modo simulación para pruebas.
 
 Pre-procesamiento aplicado antes de inferencia (basado en técnicas PDI):
-  1. CLAHE sobre canal L del espacio LAB  → mejora contraste adaptativo
-  2. Filtro bilateral                      → reduce ruido conservando bordes
+  1. CLAHE sobre canal L del espacio LAB - mejora contraste adaptativo
+  2. Filtro bilateral - reduce ruido conservando bordes
 Esto mejora la detección de personas sentadas, de espaldas o en condiciones
 de iluminación irregular.
 """
@@ -32,10 +32,10 @@ def preprocess_for_detection(image_path: str) -> str | None:
     Pipeline híbrido de pre-procesamiento para mejorar detección de personas
     sentadas, de espaldas o en escenas con iluminación irregular:
 
-      1. CLAHE en canal L (LAB)   → contraste adaptativo por zonas
-      2. Filtro bilateral          → reduce ruido preservando siluetas
-      3. Unsharp mask (enfoque)    → resalta contornos corporales
-      4. Corrección gamma          → aclara zonas oscuras (bajo mesas, esquinas)
+      1. CLAHE en canal L (LAB) - contraste adaptativo por zonas
+      2. Filtro bilateral - reduce ruido preservando siluetas
+      3. Unsharp mask (enfoque) - resalta contornos corporales
+      4. Corrección gamma - aclara zonas oscuras (bajo mesas, esquinas)
 
     Retorna la ruta de un archivo temporal o None si falla
     (en ese caso YOLO usa la imagen original como fallback).
@@ -45,7 +45,7 @@ def preprocess_for_detection(image_path: str) -> str | None:
         if img is None:
             return None
 
-        # ── 1. CLAHE sobre canal L (espacio LAB) ────────────────────────
+        # 1. CLAHE sobre canal L (espacio LAB)
         lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
         l_channel, a_channel, b_channel = cv2.split(lab)
         clahe = cv2.createCLAHE(clipLimit=2.5, tileGridSize=(8, 8))
@@ -53,15 +53,15 @@ def preprocess_for_detection(image_path: str) -> str | None:
         lab_eq = cv2.merge([l_eq, a_channel, b_channel])
         img_clahe = cv2.cvtColor(lab_eq, cv2.COLOR_LAB2BGR)
 
-        # ── 2. Filtro bilateral (preserva bordes, reduce ruido) ──────────
+        # 2. Filtro bilateral (preserva bordes, reduce ruido)
         img_bilateral = cv2.bilateralFilter(img_clahe, d=9, sigmaColor=75, sigmaSpace=75)
 
-        # ── 3. Unsharp mask – enfoca siluetas sin saturar ────────────────
+        # 3. Unsharp mask – enfoca siluetas sin saturar
         #   Fórmula: sharpened = original * 1.5 – gaussian_blur * 0.5
         blur = cv2.GaussianBlur(img_bilateral, (0, 0), sigmaX=3)
         img_sharp = cv2.addWeighted(img_bilateral, 1.5, blur, -0.5, 0)
 
-        # ── 4. Corrección gamma (γ = 0.85) – levanta sombras ────────────
+        # 4. Corrección gamma (γ = 0.85) – levanta sombras sin saturar luces 
         inv_gamma = 1.0 / 0.85
         lut = np.array([
             min(255, int((i / 255.0) ** inv_gamma * 255))
@@ -69,7 +69,7 @@ def preprocess_for_detection(image_path: str) -> str | None:
         ], dtype=np.uint8)
         img_processed = cv2.LUT(img_sharp, lut)
 
-        # ── Guardar en archivo temporal ──────────────────────────────────
+        # 5. Guardar en archivo temporal para inferencia (YOLO requiere ruta de archivo)
         ext = os.path.splitext(image_path)[-1] or ".jpg"
         tmp = tempfile.NamedTemporaryFile(suffix=ext, delete=False)
         tmp.close()
@@ -123,18 +123,18 @@ def detect_people(image_path):
     if model is None:
         return _simulated_result(source_name)
 
-    # ── Pre-procesamiento PDI antes de inferencia ────────────────────────
+    # Pre-procesamiento PDI antes de inferencia 
     temp_path = preprocess_for_detection(str(image_path))
     inference_path = temp_path if temp_path else str(image_path)
 
     try:
         results = model(
             inference_path,
-            conf=CONFIDENCE_THRESHOLD,   # 0.25 – captura personas parcialmente visibles
-            classes=[0],                 # solo clase "person"
-            imgsz=1280,                  # resolución alta → detecta personas pequeñas/lejanas
-            iou=0.4,                     # NMS más estricto → no fusiona personas adyacentes
-            augment=True,                # TTA: inferencia multi-escala + flip → mejor recall
+            conf=CONFIDENCE_THRESHOLD, # 0.25 – captura personas parcialmente visibles
+            classes=[0], # solo clase "person"
+            imgsz=1280, # resolución alta → detecta personas pequeñas/lejanas
+            iou=0.4, # NMS más estricto → no fusiona personas adyacentes
+            augment=True, # TTA: inferencia multi-escala + flip → mejor recall
             verbose=False,
         )
     finally:

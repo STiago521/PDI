@@ -9,7 +9,7 @@ const CONFIG = {
     PEOPLE_THRESHOLDS: { empty_max: 20, partial_max: 49 },
 };
 
-const AUTO_INTERVAL_SECONDS = 60; // cambia este número para ajustar el intervalo
+const AUTO_INTERVAL_SECONDS = 15 * 60; // 15 minutos
 const LS_KEY = 'ocupacion_next_analysis'; // clave en localStorage
 
 let state = {
@@ -189,6 +189,12 @@ function getNextAnalysisTime() {
     return next;
 }
 
+function formatCountdown(seconds) {
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+}
+
 function startCountdown() {
     if (state.countdownTimer) clearInterval(state.countdownTimer);
 
@@ -196,7 +202,7 @@ function startCountdown() {
         const remaining = Math.ceil((parseInt(localStorage.getItem(LS_KEY), 10) - Date.now()) / 1000);
 
         if (remaining > 0) {
-            el.nextUpdate.textContent = `${remaining}s`;
+            el.nextUpdate.textContent = formatCountdown(remaining);
         } else {
             // Programar el próximo ciclo ANTES de analizar para que no se solapen
             localStorage.setItem(LS_KEY, Date.now() + AUTO_INTERVAL_SECONDS * 1000);
@@ -224,17 +230,17 @@ function exportToCsv() {
 function setupEventListeners() {
     el.analyzeBtn.addEventListener('click', analyzeDataset);
     el.refreshBtn.addEventListener('click', loadCurrentStatus);
-    el.exportCsvBtn.addEventListener('click', exportToCsv);
+    if (el.exportCsvBtn) el.exportCsvBtn.addEventListener('click', exportToCsv);
 }
 
 function init() {
     setupEventListeners();
     const next = getNextAnalysisTime(); // asegura timestamp en localStorage
     const remaining = Math.max(1, Math.ceil((next - Date.now()) / 1000));
-    el.nextUpdate.textContent = `${remaining}s`; // muestra el número de inmediato, sin esperar 1s
+    el.nextUpdate.textContent = formatCountdown(remaining);
     loadCurrentStatus();
     startCountdown();
-    addAlert('info', `Dashboard listo – análisis automático cada ${AUTO_INTERVAL_SECONDS}s · presiona "Analizar Sótanos" para analizar ahora`);
+    addAlert('info', `Dashboard listo – análisis automático cada 15 min · presiona "Analizar Sótanos" para analizar ahora`);
 }
 
 document.addEventListener('DOMContentLoaded', init);

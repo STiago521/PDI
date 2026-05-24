@@ -3,10 +3,9 @@ Servicio de Cámara
 Gestiona la captura de imágenes con OpenCV
 """
 
-# ============================================================
 # IMPORTACIONES PARA OPENCV
 # Descomentar cuando se implemente la captura real
-# ============================================================
+
 # import cv2
 # import os
 # from datetime import datetime
@@ -39,10 +38,9 @@ def capture_image(camera_index=None, output_path=None):
             print(f"Imagen guardada en: {result['image_path']}")
     """
     
-    # ============================================================
+
     # IMPLEMENTACIÓN PARA CAPTURA REAL CON OPENCV
-    # ============================================================
-    # 
+    
     # import cv2
     # import os
     # from datetime import datetime
@@ -101,7 +99,6 @@ def capture_image(camera_index=None, output_path=None):
     #         "timestamp": None,
     #         "error": str(e)
     #     }
-    # ============================================================
     
     # RESPUESTA SIMULADA PARA PRUEBAS
     # Reemplazar con la implementación real cuando se configure la cámara
@@ -131,10 +128,8 @@ def capture_from_url(url, output_path=None):
     
     TODO: Implementar para cámaras IP del campus
     """
-    # ============================================================
     # IMPLEMENTACIÓN FUTURA PARA CÁMARAS IP
-    # ============================================================
-    # 
+    
     # import cv2
     # 
     # try:
@@ -150,7 +145,6 @@ def capture_from_url(url, output_path=None):
     # 
     # except Exception as e:
     #     return {"success": False, "error": str(e), ...}
-    # ============================================================
     
     return {
         "success": False,
@@ -169,10 +163,9 @@ def get_available_cameras():
     
     TODO: Implementar detección de cámaras
     """
-    # ============================================================
+  
     # IMPLEMENTACIÓN FUTURA
-    # ============================================================
-    # 
+ 
     # import cv2
     # 
     # available = []
@@ -182,9 +175,9 @@ def get_available_cameras():
     #         available.append(i)
     #         cap.release()
     # return available
-    # ============================================================
+
     
-    return [0]  # Por defecto, asumir que hay una cámara en índice 0
+    return [0]  
 
 
 def test_camera_connection(camera_index=None):

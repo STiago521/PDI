@@ -14,9 +14,10 @@ MODELS_FOLDER = "models"
 CAMERA_INDEX = 0
 
 # Umbrales basados en conteo ABSOLUTO de personas
-# Vacío:              0 – 9 personas
-# Parcialmente lleno: 10 – 19 personas
-# Lleno:              20 o más personas
+# Vacío: 0 – 20 personas
+# Parcialmente lleno: 21 – 49 personas
+# Lleno: 50 o más personas
+
 PEOPLE_THRESHOLDS = {
     "empty_max": 20,
     "partial_max": 49,
