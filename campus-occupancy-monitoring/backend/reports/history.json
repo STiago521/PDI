@@ -1,3 +1,42 @@
 {
-  "reports": []
+  "reports": [
+    {
+      "id": "20260526184637198255",
+      "timestamp": "2026-05-26T18:46:37.198255",
+      "date_display": "26 May 2026, 06:46 PM",
+      "site": "Sótano 1",
+      "people_count": 46,
+      "status": "Parcialmente lleno",
+      "images_analyzed": 5,
+      "image_names": [
+        "sss.jpeg",
+        "fdd.jpeg",
+        "WhatsApp Image 2026-03-28 at 2.56.53 PM (4).jpeg",
+        "WhatsApp Image 2026-04-10 at 2.53.08 PM (1).jpeg",
+        "WhatsApp Image 2026-04-10 at 2.54.31 PM.jpeg"
+      ],
+      "processed_images": [
+        {
+          "filename": "sss_result_20260526_184635.jpg",
+          "count": 7
+        },
+        {
+          "filename": "fdd_result_20260526_184635.jpg",
+          "count": 11
+        },
+        {
+          "filename": "WhatsApp Image 2026-03-28 at 2.56.53 PM (4)_result_20260526_184636.jpg",
+          "count": 9
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.53.08 PM (1)_result_20260526_184636.jpg",
+          "count": 12
+        },
+        {
+          "filename": "WhatsApp Image 2026-04-10 at 2.54.31 PM_result_20260526_184637.jpg",
+          "count": 7
+        }
+      ]
+    }
+  ]
 }
